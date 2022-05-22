@@ -181,7 +181,7 @@ outline: 1px solid red;}
 
 /* Button */
 
-.primary.btn {
+.primary-btn {
   display: inline-block;
 
   padding-top: 10px 32px;
@@ -495,7 +495,7 @@ outline: 1px solid red;}
 .client-items:focus {
   border: 1px solid var(--accent-color);
   transition-property: border;
-  transition-duration: 2250ms;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
