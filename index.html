@@ -29,13 +29,17 @@
           </a>
           <ul class="header-nav list">
             <li class="item">
-              <a class="link current" href="./index.html">Студия</a>
+              <a class="link current navigation-link" href="./index.html"
+                >Студия</a
+              >
             </li>
             <li class="item">
-              <a class="link" href="./portfolio.htm">Портфолио</a>
+              <a class="link navigation-link" href="./portfolio.htm"
+                >Портфолио</a
+              >
             </li>
             <li class="item">
-              <a class="link" href="./contacts.htm">Контакты</a>
+              <a class="link navigation-link" href="./contacts.htm">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -66,7 +70,18 @@
         <div class="overlay">
           <div class="hero-container">
             <h1>Эффективные решения<br />для вашего бизнеса</h1>
-            <button type="button" class="primary btn">Заказать услугу</button>
+            <button type="button" class="primary btn" data-modal-open>
+              Заказать услугу
+            </button>
+            <div class="backdrop" data-modal>
+              <div class="modal-wrapper">
+                <button class="modal-btn" data-modal-close>
+                  <!-- <svg width="" height=""><use href="">
+              </use></svg> -->
+                </button>
+                <form class="modal-form"></form>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -128,7 +143,7 @@
         </div>
       </section>
       <!--Work process-->
-      <section class="section no-padding">
+      <section class="section no-padding gallery">
         <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="list-pic list">
@@ -140,6 +155,7 @@
                 width="370"
                 height="294"
               />
+              <p class="work-description">Десктопные приложения</p>
             </li>
             <li class="item">
               <img
@@ -149,6 +165,7 @@
                 width="370"
                 height="294"
               />
+              <p class="work-description">Мобильные приложения</p>
             </li>
             <li class="item">
               <img
@@ -158,6 +175,7 @@
                 width="370"
                 height="294"
               />
+              <p class="work-description">Дизайнерские решения</p>
             </li>
           </ul>
         </div>
@@ -439,6 +457,9 @@
           </ul>
         </div>
       </section>
+
+<!-- Clients -->
+
       <section class="section clients">
         <div class="clients container">
           <h2 class="section-title">Постоянные клиенты</h2>
@@ -592,5 +613,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

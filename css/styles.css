@@ -1,4 +1,4 @@
- /* colors for check
+/* colors for check
 
  .section:nth-child(odd) {
   background-color: lightgrey;
@@ -68,8 +68,6 @@ outline: 1px solid red;}
   outline: 1px solid blue;
 } */
 
-
-
 /* Hero */
 
 .overlay {
@@ -77,9 +75,12 @@ outline: 1px solid red;}
   height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background:
-      linear-gradient(to right, rgba(47, 48, 58, .4), rgba(47, 48, 58, .4)),
-      url(../images/head.png);
+  background: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/head.png);
   background-position: center;
   background-size: cover;
   padding-left: 15px;
@@ -131,6 +132,52 @@ outline: 1px solid red;}
   padding-right: 15px;
   width: 1200px;
 }
+/* Modal form */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal-wrapper {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+.modal-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+  padding: 0;
+
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #fff;
+  background-image: url(../icons/close.png);
+}
 
 /* Button */
 
@@ -153,6 +200,7 @@ outline: 1px solid red;}
   line-height: 1.88;
   letter-spacing: 0.06em;
 }
+
 
 .btn {
   display: inline-block;
@@ -179,6 +227,10 @@ outline: 1px solid red;}
   background-color: var(--accent-color);
   color: var(--white-color);
   cursor: pointer;
+
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Sections */
@@ -211,7 +263,7 @@ outline: 1px solid red;}
   background-position: center; */
   justify-content: center;
   align-items: center;
-  border-radius:4px;
+  border-radius: 4px;
   /* box-shadow: 0px 2px 4px #787373; */
 }
 .feature-icon {
@@ -303,9 +355,36 @@ outline: 1px solid red;}
 
 .list-pic .item {
   margin-right: 30px;
+  height: 294px;
 }
 .list-pic .item:last-child {
   margin-right: 0;
+}
+.gallery .item {
+  position: relative;
+}
+.gallery .work-description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: block;
+  width: 100%;
+  height: 70px;
+  padding: 27px 0;
+  /* text-align: center; */
+  /* justify-content: center; */
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  background-color: rgba(47, 48, 58, 0.8);
 }
 
 /* Team */
@@ -367,7 +446,6 @@ outline: 1px solid red;}
   justify-content: center;
 }
 
-
 .social-item:not(:last-child) {
   margin-right: 10px;
 }
@@ -386,13 +464,15 @@ outline: 1px solid red;}
 .social-link:focus {
   background-color: var(--accent-color);
   fill: white;
+  transition-property: background-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Clients */
 
 .clients-list {
   display: flex;
   justify-content: center;
-  
 }
 .client-link {
   display: flex;
@@ -404,7 +484,7 @@ outline: 1px solid red;}
   fill: #afb1b8;
 }
 .client-items {
-  border: 1px solid #AFB1B8;
+  border: 1px solid #afb1b8;
   border-radius: 4px;
 }
 
@@ -414,10 +494,17 @@ outline: 1px solid red;}
 .client-items:hover,
 .client-items:focus {
   border: 1px solid var(--accent-color);
+  transition-property: border;
+  transition-duration: 2250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .client-link:hover,
 .client-link:focus {
   fill: var(--accent-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*  Our works Portfolio */
@@ -493,14 +580,18 @@ section {
   background: var(--white-color);
   border: 1px solid #eeeeee;
   box-sizing: border-box;
- 
 }
 .flex-element:hover,
 .flex-element:focus {
- box-shadow: 0px 4px 5px 0px #ada8a8,
- 2px 0px 5px 0px #d9d5d5;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+  0px 4px 4px rgba(0, 0, 0, 0.06), 
+  1px 4px 6px rgba(0, 0, 0, 0.16);
 
- cursor: pointer;
+  cursor: pointer;
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .flex-element:nth-child(3n) {
@@ -517,4 +608,8 @@ section {
   color: var(--white-color);
   cursor: pointer;
   box-shadow: 0px 2px 2px grey;
+
+  transition-property: color, background-color, box-shdow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }

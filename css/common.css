@@ -103,14 +103,36 @@ ul {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-
+margin-bottom: -3px;
   color: var(--black-color);
   text-decoration: none;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-nav .link.current {
   color: var(--accent-color);
 }
+
+.current.navigation-link {
+  position: relative;
+}
+.current.navigation-link::after {
+position: absolute;
+bottom: 0;
+left: 0;
+
+content: '';
+display: block;
+width: 100%;
+height: 4px;
+
+background-color: var(--accent-color);
+
+}
+
 .list-address.list {
   display: flex;
   align-items: center;
@@ -138,6 +160,8 @@ ul {
   text-decoration: none;
 
   color: var(--secondary-text-color);
+  
+}
 }
 /* icons contacts */
 
@@ -149,6 +173,9 @@ ul {
 .tel {
   display: flex;
   fill: #757575;
+  transition-property: color;
+  transition-duration: 2250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-envelope{
@@ -170,6 +197,9 @@ ul {
 .tel:hover,
 .tel:focus {
   fill: var(--accent-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Footer */
@@ -205,6 +235,9 @@ ul {
 .list-address:hover,
 .list-address:focus {
   color: var(--accent-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer {
@@ -283,4 +316,7 @@ ul {
 .social-link-footer:focus {
   background-color: var(--accent-color);
   fill: white;
+  transition-property: background-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
