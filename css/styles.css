@@ -161,9 +161,10 @@ outline: 1px solid red;}
   height: 581px;
   border-radius: 4px;
   background-color: #ffffff;
-   transition-property: background-color;
+  
+  transition-property: background-color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .modal-btn {
   position: absolute;
